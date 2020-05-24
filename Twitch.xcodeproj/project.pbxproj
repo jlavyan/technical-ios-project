@@ -15,11 +15,14 @@
 		20F2C389247A54E90073189A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20F2C387247A54E90073189A /* LaunchScreen.storyboard */; };
 		20F2C394247A54E90073189A /* TwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C393247A54E90073189A /* TwitchTests.swift */; };
 		20F2C39F247A54E90073189A /* TwitchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C39E247A54E90073189A /* TwitchUITests.swift */; };
-		20F2C3B2247A617D0073189A /* TwichListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3B1247A617D0073189A /* TwichListViewModel.swift */; };
+		20F2C3B2247A617D0073189A /* VideoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3B1247A617D0073189A /* VideoListModel.swift */; };
 		20F2C3B4247A63490073189A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3B3247A63480073189A /* Repository.swift */; };
 		20F2C3B9247A649D0073189A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3B8247A649D0073189A /* Constants.swift */; };
 		20F2C3BB247A65A30073189A /* AuthTokenRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3BA247A65A30073189A /* AuthTokenRepository.swift */; };
 		20F2C3BF247A94B60073189A /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3BE247A94B50073189A /* Token.swift */; };
+		20F2C3C4247B011E0073189A /* DictionaryCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3C3247B011E0073189A /* DictionaryCodable.swift */; };
+		20F2C3C6247B02940073189A /* VideoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3C5247B02940073189A /* VideoRow.swift */; };
+		20F2C3C8247B03C50073189A /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C3C7247B03C50073189A /* DetailView.swift */; };
 		945DAC9338DAC5ABA0692987 /* Pods_TwitchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FA0676CACC09C9C9E210DA /* Pods_TwitchTests.framework */; };
 		BDEBEE64CD2F5657F53DD13F /* Pods_Twitch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1447518415096E2E78D2CF92 /* Pods_Twitch.framework */; };
 		C0A7FA3324F1B83C19BFBADE /* Pods_TwitchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F030834695D8D83CD169E6 /* Pods_TwitchUITests.framework */; };
@@ -58,12 +61,15 @@
 		20F2C39A247A54E90073189A /* TwitchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F2C39E247A54E90073189A /* TwitchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchUITests.swift; sourceTree = "<group>"; };
 		20F2C3A0247A54E90073189A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20F2C3B1247A617D0073189A /* TwichListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwichListViewModel.swift; sourceTree = "<group>"; };
+		20F2C3B1247A617D0073189A /* VideoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListModel.swift; sourceTree = "<group>"; };
 		20F2C3B3247A63480073189A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		20F2C3B8247A649D0073189A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20F2C3BA247A65A30073189A /* AuthTokenRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthTokenRepository.swift; sourceTree = "<group>"; };
 		20F2C3BC247A74890073189A /* Combine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Combine.framework; path = System/Library/Frameworks/Combine.framework; sourceTree = SDKROOT; };
 		20F2C3BE247A94B50073189A /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		20F2C3C3247B011E0073189A /* DictionaryCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCodable.swift; sourceTree = "<group>"; };
+		20F2C3C5247B02940073189A /* VideoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRow.swift; sourceTree = "<group>"; };
+		20F2C3C7247B03C50073189A /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6FCA9286400622BB611F56DE /* Pods-TwitchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchUITests.release.xcconfig"; path = "Target Support Files/Pods-TwitchUITests/Pods-TwitchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7529557C7678E714F82DD1D5 /* Pods-TwitchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchTests.release.xcconfig"; path = "Target Support Files/Pods-TwitchTests/Pods-TwitchTests.release.xcconfig"; sourceTree = "<group>"; };
 		817837ADE793EA6D691E7CF1 /* Pods-Twitch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitch.release.xcconfig"; path = "Target Support Files/Pods-Twitch/Pods-Twitch.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				20F2C380247A54E70073189A /* ContentView.swift */,
+				20F2C3C5247B02940073189A /* VideoRow.swift */,
+				20F2C3C7247B03C50073189A /* DetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -177,7 +185,7 @@
 		20F2C3AD247A60EC0073189A /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				20F2C3B1247A617D0073189A /* TwichListViewModel.swift */,
+				20F2C3B1247A617D0073189A /* VideoListModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -185,6 +193,7 @@
 		20F2C3AE247A60F30073189A /* Middlewares */ = {
 			isa = PBXGroup;
 			children = (
+				20F2C3C2247B010D0073189A /* Extensions */,
 				20F2C3B7247A64900073189A /* Repositories */,
 				20F2C3B8247A649D0073189A /* Constants.swift */,
 			);
@@ -215,6 +224,14 @@
 				20F2C3BA247A65A30073189A /* AuthTokenRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		20F2C3C2247B010D0073189A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20F2C3C3247B011E0073189A /* DictionaryCodable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		35E04137CA9F47FAE8FF0921 /* Frameworks */ = {
@@ -500,9 +517,12 @@
 			files = (
 				20F2C37D247A54E70073189A /* AppDelegate.swift in Sources */,
 				20F2C37F247A54E70073189A /* SceneDelegate.swift in Sources */,
+				20F2C3C6247B02940073189A /* VideoRow.swift in Sources */,
+				20F2C3C4247B011E0073189A /* DictionaryCodable.swift in Sources */,
 				20F2C3B4247A63490073189A /* Repository.swift in Sources */,
+				20F2C3C8247B03C50073189A /* DetailView.swift in Sources */,
 				20F2C3B9247A649D0073189A /* Constants.swift in Sources */,
-				20F2C3B2247A617D0073189A /* TwichListViewModel.swift in Sources */,
+				20F2C3B2247A617D0073189A /* VideoListModel.swift in Sources */,
 				20F2C381247A54E70073189A /* ContentView.swift in Sources */,
 				20F2C3BB247A65A30073189A /* AuthTokenRepository.swift in Sources */,
 				20F2C3BF247A94B60073189A /* Token.swift in Sources */,

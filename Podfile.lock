@@ -10,7 +10,12 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - SwiftTwitch (0.1.0):
+  - SDWebImage (5.7.4):
+    - SDWebImage/Core (= 5.7.4)
+  - SDWebImage/Core (5.7.4)
+  - SDWebImageSwiftUI (1.4.0):
+    - SDWebImage (~> 5.7)
+  - SwiftTwitch (0.1.1):
     - Marshal (~> 1.2.7)
 
 DEPENDENCIES:
@@ -18,7 +23,8 @@ DEPENDENCIES:
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
   - RxTest (~> 5)
-  - SwiftTwitch
+  - SDWebImageSwiftUI
+  - SwiftTwitch (from `https://github.com/jlavyan/SwiftTwitch`, branch `fix/client-id`)
 
 SPEC REPOS:
   trunk:
@@ -28,7 +34,18 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
-    - SwiftTwitch
+    - SDWebImage
+    - SDWebImageSwiftUI
+
+EXTERNAL SOURCES:
+  SwiftTwitch:
+    :branch: fix/client-id
+    :git: https://github.com/jlavyan/SwiftTwitch
+
+CHECKOUT OPTIONS:
+  SwiftTwitch:
+    :commit: f4e38da7fccbe47dc20465b942a69a6ede829039
+    :git: https://github.com/jlavyan/SwiftTwitch
 
 SPEC CHECKSUMS:
   Marshal: ef480864a6af10a63f67be7e55bb5d8fe67a16d9
@@ -37,8 +54,10 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  SwiftTwitch: 40957abccac5d6d40d8e047224178364ebbaf20c
+  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SDWebImageSwiftUI: 034806fc7e19e0a36157fb8ecb9fc0437cc75230
+  SwiftTwitch: 95fb0dcb5e2830f0991d15492f1e07b936d174e8
 
-PODFILE CHECKSUM: 31fd33fe3ddbf9f4b7e98b7912beacbc51ed001d
+PODFILE CHECKSUM: c0c776b43ff9fdd05e8590ffbe76a22db844f2fa
 
 COCOAPODS: 1.8.4

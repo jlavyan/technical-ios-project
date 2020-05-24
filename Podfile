@@ -7,7 +7,8 @@ use_frameworks!
 target 'Twitch' do
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
-    pod 'SwiftTwitch'
+    pod 'SwiftTwitch', :git => 'https://github.com/jlavyan/SwiftTwitch', :branch => 'fix/client-id'
+    pod 'SDWebImageSwiftUI'
 end
 
 

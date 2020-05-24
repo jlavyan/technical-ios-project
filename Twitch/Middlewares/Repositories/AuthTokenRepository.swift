@@ -53,6 +53,7 @@ class AuthTokenRepository: Repository{
         }
         
         let jsonDecoder = JSONDecoder()
+
         guard let token = try? jsonDecoder.decode(Token.self, from: data) else{
             observer.onError(AuthError.noData)
             return
@@ -62,6 +63,15 @@ class AuthTokenRepository: Repository{
         observer.onCompleted()
     }
     
+    /// Fetch cliend id from enviroments
+    var clientId: String {
+        get{
+             let client = ProcessInfo.processInfo.environment["clientId"] ?? ""
+             assert(client != "", "Twich clientSecret enviroment required")
+             return client
+        }
+    }
+    
     /// Authorization body
     private func authBody() -> Data?{
         var body = [String: String]()
@@ -69,6 +79,7 @@ class AuthTokenRepository: Repository{
         body["client_secret"] = clientSecret
         body["redirect_uri"] = redirectUrl
         body["grant_type"] = "client_credentials"
+        body["scope"] = "viewing_activity_read"
 
         let encoder = JSONEncoder()
         if let jsonData = try? encoder.encode(body) {
@@ -81,16 +92,7 @@ class AuthTokenRepository: Repository{
 
     /// Oauth 2 redirect url
     private let redirectUrl = "http://localhost"
-    
-    /// Fetch cliend id from enviroments
-    private var clientId: String {
-        get{
-             let client = ProcessInfo.processInfo.environment["clientId"] ?? ""
-             assert(client != "", "Twich clientSecret enviroment required")
-             return client
-        }
-    }
-    
+        
     /// Fetch cliend secret from enviroments
     private var clientSecret: String {
         get{

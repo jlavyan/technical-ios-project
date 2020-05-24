@@ -7,10 +7,35 @@
 //
 
 import SwiftUI
+import SwiftTwitch
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        NavigationView {
+            MasterView()
+                .navigationBarTitle(Text("Home"))
+        }
+    }
+}
+
+struct MasterView: View {
+    @ObservedObject var viewModel = VideoListModel()
+
+    var body: some View {
+        List {
+            ForEach(self.viewModel.videos, id: \.title){ video in
+                VStack {
+                    NavigationLink(
+                        destination: DetailView(video)
+                    ) {
+                        VideoRow(video: video)
+                            .onAppear {
+                    }
+            }}
+         }
+        }.onAppear {
+            self.viewModel.load()
+        }
     }
 }
 
@@ -19,3 +44,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

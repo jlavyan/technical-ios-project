@@ -34,7 +34,7 @@ class AuthTokenRepository: Repository{
                     observer.onError(AuthError.notFound)
                     return
                 }
-
+                
                 self.loadToken(observer: observer, data: data)
             }
             task.resume()
@@ -53,12 +53,12 @@ class AuthTokenRepository: Repository{
         }
         
         let jsonDecoder = JSONDecoder()
-
+        
         guard let token = try? jsonDecoder.decode(Token.self, from: data) else{
             observer.onError(AuthError.noData)
             return
         }
-
+        
         observer.onNext(token)
         observer.onCompleted()
     }
@@ -66,9 +66,9 @@ class AuthTokenRepository: Repository{
     /// Fetch cliend id from enviroments
     var clientId: String {
         get{
-             let client = ProcessInfo.processInfo.environment["clientId"] ?? ""
-             assert(client != "", "Twich clientSecret enviroment required")
-             return client
+            let client = ProcessInfo.processInfo.environment["clientId"] ?? ""
+            assert(client != "", "Twich clientSecret enviroment required")
+            return client
         }
     }
     
@@ -80,19 +80,19 @@ class AuthTokenRepository: Repository{
         body["redirect_uri"] = redirectUrl
         body["grant_type"] = "client_credentials"
         body["scope"] = "viewing_activity_read"
-
+        
         let encoder = JSONEncoder()
         if let jsonData = try? encoder.encode(body) {
             return jsonData
         }
-
+        
         return nil
     }
-
-
+    
+    
     /// Oauth 2 redirect url
     private let redirectUrl = "http://localhost"
-        
+    
     /// Fetch cliend secret from enviroments
     private var clientSecret: String {
         get{
@@ -101,6 +101,6 @@ class AuthTokenRepository: Repository{
             return secret
         }
     }
-
+    
 }
 

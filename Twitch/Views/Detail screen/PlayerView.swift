@@ -12,18 +12,21 @@ import SwiftTwitch
 
 /// UIView relation which must be used in SwiftUI
 struct PlayerView: UIViewRepresentable {
+    /// Video model must for player vide
     var video: VideoData
+    
     init(video: VideoData) {
         self.video = video
     }
-  func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
-  }
-
-  func makeUIView(context: Context) -> UIView {
     
-    let playerView = TwitchPlayer(frame: .zero)
-    playerView.load(URLRequest(url: video.url))
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
+    }
     
-    return playerView
-  }
+    func makeUIView(context: Context) -> UIView {
+        
+        let playerView = TwitchPlayer(frame: .zero)
+        playerView.load(URLRequest(url: video.url))
+        
+        return playerView
+    }
 }

@@ -19,11 +19,11 @@ class Token: Codable{
         case expiresIn = "expires_in"
         case tokenType = "token_type"
     }
-
-        
+    
+    
     required init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-
+        
         accessToken = try values.decode(String.self, forKey: .acessToken)
         expiresIn = try values.decode(Int.self, forKey: .expiresIn)
         tokenType = try values.decode(String.self, forKey: .tokenType)
@@ -35,7 +35,7 @@ class Token: Codable{
         try container.encode(expiresIn, forKey: .expiresIn)
         try container.encode(tokenType, forKey: .tokenType)
     }
-
-
+    
+    
 }
 

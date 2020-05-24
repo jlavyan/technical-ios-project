@@ -20,12 +20,10 @@ struct DetailView: View {
         NavigationView{
             VStack(alignment: .leading) {
                 PlayerView(video: video).frame(maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-
+                
             }.padding(.top, 10)
         }.navigationBarTitle(Text("")).edgesIgnoringSafeArea([.top, .bottom])
     }
-    
-  
 }
 
 

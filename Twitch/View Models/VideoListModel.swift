@@ -12,19 +12,19 @@ import SwiftTwitch
 /// For load video list
 class VideoListModel: ObservableObject{
     @Published private(set) var videos = [VideoData]()
-
+    
     private let authRepository = AuthTokenRepository()
     private let disposeBag = DisposeBag()
     
     /// First load auth token then video list from twitch
     func load() {
         authRepository.authToken().observeOn(MainScheduler.instance)
-        .subscribe(onNext: { token in
-            self.setAccessToken(token.accessToken)
-            self.loadVideos()
-        }, onError: { error in
-        })
-        .disposed(by: disposeBag)
+            .subscribe(onNext: { token in
+                self.setAccessToken(token.accessToken)
+                self.loadVideos()
+            }, onError: { error in
+            })
+            .disposed(by: disposeBag)
     }
     
     /// Call twich api for load videos

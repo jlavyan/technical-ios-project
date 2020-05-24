@@ -21,10 +21,9 @@ struct ContentView: View {
 
 /// Video list view
 struct VideoListView: View {
-    
     /// Model for load video list
     @ObservedObject var viewModel = VideoListModel()
-
+    
     var body: some View {
         List {
             ForEach(self.viewModel.videos, id: \.title){ video in
@@ -34,9 +33,9 @@ struct VideoListView: View {
                     ) {
                         VideoRow(video: video)
                             .onAppear {
-                    }
-            }}
-         }
+                        }
+                    }}
+            }
         }.onAppear {
             /// Load videos on screen appear
             self.viewModel.load()

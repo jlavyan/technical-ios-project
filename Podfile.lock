@@ -17,6 +17,7 @@ PODS:
     - SDWebImage (~> 5.7)
   - SwiftTwitch (0.1.1):
     - Marshal (~> 1.2.7)
+  - TwitchPlayer (0.2.3)
 
 DEPENDENCIES:
   - RxBlocking (~> 5)
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - RxTest (~> 5)
   - SDWebImageSwiftUI
   - SwiftTwitch (from `https://github.com/jlavyan/SwiftTwitch`, branch `fix/client-id`)
+  - TwitchPlayer
 
 SPEC REPOS:
   trunk:
@@ -36,6 +38,7 @@ SPEC REPOS:
     - RxTest
     - SDWebImage
     - SDWebImageSwiftUI
+    - TwitchPlayer
 
 EXTERNAL SOURCES:
   SwiftTwitch:
@@ -57,7 +60,8 @@ SPEC CHECKSUMS:
   SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
   SDWebImageSwiftUI: 034806fc7e19e0a36157fb8ecb9fc0437cc75230
   SwiftTwitch: 95fb0dcb5e2830f0991d15492f1e07b936d174e8
+  TwitchPlayer: 60e9999dec4f74121685eec0b6e9843c2b44d794
 
-PODFILE CHECKSUM: c0c776b43ff9fdd05e8590ffbe76a22db844f2fa
+PODFILE CHECKSUM: ed4ebe407deda0a1c7197bbfad98c8c2beb64adb
 
 COCOAPODS: 1.8.4

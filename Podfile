@@ -9,6 +9,7 @@ target 'Twitch' do
     pod 'RxCocoa', '~> 5'
     pod 'SwiftTwitch', :git => 'https://github.com/jlavyan/SwiftTwitch', :branch => 'fix/client-id'
     pod 'SDWebImageSwiftUI'
+    pod 'TwitchPlayer'
 end
 
 

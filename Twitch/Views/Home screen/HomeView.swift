@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftTwitch
 
 /// Navigation view
-struct ContentView: View {
+struct HomeView: View {
     var body: some View {
         NavigationView {
             VideoListView()

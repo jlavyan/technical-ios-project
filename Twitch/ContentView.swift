@@ -9,16 +9,20 @@
 import SwiftUI
 import SwiftTwitch
 
+/// Navigation view
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            MasterView()
+            VideoListView()
                 .navigationBarTitle(Text("Home"))
         }
     }
 }
 
-struct MasterView: View {
+/// Video list view
+struct VideoListView: View {
+    
+    /// Model for load video list
     @ObservedObject var viewModel = VideoListModel()
 
     var body: some View {
@@ -34,6 +38,7 @@ struct MasterView: View {
             }}
          }
         }.onAppear {
+            /// Load videos on screen appear
             self.viewModel.load()
         }
     }

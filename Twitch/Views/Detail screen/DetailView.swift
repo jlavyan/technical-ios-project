@@ -9,8 +9,8 @@
 import SwiftUI
 import SwiftTwitch
 
+/// Detail view which contain view player
 struct DetailView: View {
-
     let video: VideoData
     init(_ video: VideoData){
         self.video = video
@@ -19,12 +19,13 @@ struct DetailView: View {
     var body: some View {
         NavigationView{
             VStack(alignment: .leading) {
-                Text(video.title).bold().font(Font.system(size: 20)).padding(10)
-                Text(video.description).padding(10)
-                Spacer()
-            }.padding(.top, 140)
-            }.navigationBarTitle(Text("")).edgesIgnoringSafeArea([.top, .bottom])
+                PlayerView(video: video).frame(maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+
+            }.padding(.top, 10)
+        }.navigationBarTitle(Text("")).edgesIgnoringSafeArea([.top, .bottom])
     }
     
   
 }
+
+

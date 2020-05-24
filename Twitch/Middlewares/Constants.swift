@@ -11,4 +11,8 @@ import Foundation
 class Constant {
     /// This url must be combined with cliend id for get auth token
     static let twichBaseApi = "https://id.twitch.tv/oauth2"
+    
+    /// Hardcoded user id which will be used for load videos
+    static let userid = "60056333"
+
 }

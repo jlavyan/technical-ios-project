@@ -13,15 +13,23 @@ import SwiftTwitch
 class VideoListModel: ObservableObject{
     @Published private(set) var videos = [VideoData]()
     
+    /// This variable will halpe to get auth token
     private let authRepository = AuthTokenRepository()
+    
+    /// Video list loader
+    private let twichLoader = TwichLoader()
+    
+    
     private let disposeBag = DisposeBag()
     
     /// First load auth token then video list from twitch
     func load() {
-        authRepository.authToken().observeOn(MainScheduler.instance)
-            .subscribe(onNext: { token in
-                self.setAccessToken(token.accessToken)
-                self.loadVideos()
+        authRepository.authToken().flatMap { (token) -> Observable<[VideoData]> in
+            self.setAccessToken(token.accessToken)
+            return self.twichLoader.videoList()
+        }.observeOn(MainScheduler.instance)
+            .subscribe(onNext: { videos in
+                self.videos = videos
             }, onError: { error in
             })
             .disposed(by: disposeBag)
@@ -29,21 +37,6 @@ class VideoListModel: ObservableObject{
     
     /// Call twich api for load videos
     private func loadVideos(){
-        Twitch.Videos.getVideos(videoIds: nil, userId: "60056333", gameId: nil) {
-            switch $0 {
-            case .success(let getVideosData):
-                DispatchQueue.main.async {
-                    self.videos = getVideosData.videoData
-                }
-            case .failure(let data, _, _):
-                if let data = data,
-                    // Print error data
-                    let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
-                    let jsonDict = jsonObject as? [String: Any]{
-                    print(jsonDict)
-                }
-            }
-        }
     }
     
     /// Twich token client id configuration

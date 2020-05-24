@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2011C093247B118600622992 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011C092247B118600622992 /* PlayerView.swift */; };
+		20416A27247B227D00B6776A /* TwichLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20416A26247B227D00B6776A /* TwichLoader.swift */; };
 		20F2C37D247A54E70073189A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C37C247A54E70073189A /* AppDelegate.swift */; };
 		20F2C37F247A54E70073189A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C37E247A54E70073189A /* SceneDelegate.swift */; };
 		20F2C381247A54E70073189A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C380247A54E70073189A /* ContentView.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		1447518415096E2E78D2CF92 /* Pods_Twitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2011C092247B118600622992 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		20416A26247B227D00B6776A /* TwichLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwichLoader.swift; sourceTree = "<group>"; };
 		20F2C379247A54E70073189A /* Twitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F2C37C247A54E70073189A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Twitch/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		20F2C37E247A54E70073189A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 				2011C092247B118600622992 /* PlayerView.swift */,
 			);
 			path = "Detail screen";
+			sourceTree = "<group>";
+		};
+		20416A25247B225900B6776A /* TwichLoader */ = {
+			isa = PBXGroup;
+			children = (
+				20416A26247B227D00B6776A /* TwichLoader.swift */,
+			);
+			path = TwichLoader;
 			sourceTree = "<group>";
 		};
 		20F2C370247A54E70073189A = {
@@ -212,6 +222,7 @@
 		20F2C3AE247A60F30073189A /* Middlewares */ = {
 			isa = PBXGroup;
 			children = (
+				20416A25247B225900B6776A /* TwichLoader */,
 				20F2C3C2247B010D0073189A /* Extensions */,
 				20F2C3B7247A64900073189A /* Repositories */,
 				20F2C3B8247A649D0073189A /* Constants.swift */,
@@ -539,6 +550,7 @@
 				20F2C3C6247B02940073189A /* VideoRow.swift in Sources */,
 				2011C093247B118600622992 /* PlayerView.swift in Sources */,
 				20F2C3C4247B011E0073189A /* DictionaryCodable.swift in Sources */,
+				20416A27247B227D00B6776A /* TwichLoader.swift in Sources */,
 				20F2C3B4247A63490073189A /* Repository.swift in Sources */,
 				20F2C3C8247B03C50073189A /* DetailView.swift in Sources */,
 				20F2C3B9247A649D0073189A /* Constants.swift in Sources */,

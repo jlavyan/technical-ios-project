@@ -25,5 +25,3 @@ struct DetailView: View {
         }.navigationBarTitle(Text("")).edgesIgnoringSafeArea([.top, .bottom])
     }
 }
-
-

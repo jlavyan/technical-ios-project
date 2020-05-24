@@ -10,9 +10,9 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - SDWebImage (5.7.4):
-    - SDWebImage/Core (= 5.7.4)
-  - SDWebImage/Core (5.7.4)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
   - SDWebImageSwiftUI (1.4.0):
     - SDWebImage (~> 5.7)
   - SwiftTwitch (0.1.1):
@@ -57,7 +57,7 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  SDWebImage: 48b88379b798fd1e4298f95bb25d2cdabbf4deb3
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
   SDWebImageSwiftUI: 034806fc7e19e0a36157fb8ecb9fc0437cc75230
   SwiftTwitch: 95fb0dcb5e2830f0991d15492f1e07b936d174e8
   TwitchPlayer: 60e9999dec4f74121685eec0b6e9843c2b44d794

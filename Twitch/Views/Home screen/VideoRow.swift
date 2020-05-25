@@ -41,6 +41,7 @@ struct VideoRow: View {
 
 
 extension VideoData{
+    /// Replace url with given `width`, `height`
     func thumbnail(width: Int = 200, height: Int = 200) -> String{
         var replaced = thumbnailURLString.replacingOccurrences(of: "%{width}", with: "\(width)")
         replaced = replaced.replacingOccurrences(of: "%{height}", with: "\(height)")

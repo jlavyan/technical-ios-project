@@ -14,7 +14,7 @@ Please run `pod update` for get latest database
 1. Clone this repo
 2. Open shell window and navigate to project folder
 3. Run `pod install`
-4. Open `Twitch.xcworkspace.xcworkspace` and run the project on selected device or simulator
+4. Open `Twitch.xcworkspace` and run the project on selected device or simulator
 
 # How to put enviroments
 

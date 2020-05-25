@@ -48,8 +48,8 @@ struct VideoListView: View {
                 self.viewModel.load()
             }
             
-            ActivityIndicator()
-                .frame(width: 50, height: 50).opacity(self.viewModel.videos.count == 0 ? 1.0 : 0.0)
+            ActivityIndicator(isAnimating: .constant(self.viewModel.videos.count == 0), style: .large)
+                .frame(width: 50, height: 50)
         }
 
     }

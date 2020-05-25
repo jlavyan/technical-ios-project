@@ -18,11 +18,15 @@ struct DetailView: View {
     
     var body: some View {
         NavigationView{
-            VStack(alignment: .leading) {
-                PlayerView(video: video).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+            ZStack{
+                VStack(alignment: .leading) {
+                    PlayerView(video: video).frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .topLeading)
+                }.padding(.top, 140)
 
-                
-            }.padding(.top, 140)
+                ActivityIndicator(isAnimating: .constant(true), style: .large)
+                    .frame(width: 50, height: 50)
+
+            }
         }.navigationBarTitle(Text("")).edgesIgnoringSafeArea([.top, .bottom])
     }
 }

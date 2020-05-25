@@ -26,7 +26,28 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "NO">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "20F2C38E247A54E90073189A"
+            BuildableName = "TwitchTests.xctest"
+            BlueprintName = "TwitchTests"
+            ReferencedContainer = "container:Twitch.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "clientid"
+            value = "jpgequam6ev2l6jdssn37dduuv02lc"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "clientSecret"
+            value = "46zu054ke58o81txe38bntxg42g77q"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -35,16 +56,6 @@
                BlueprintIdentifier = "20F2C38E247A54E90073189A"
                BuildableName = "TwitchTests.xctest"
                BlueprintName = "TwitchTests"
-               ReferencedContainer = "container:Twitch.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "20F2C399247A54E90073189A"
-               BuildableName = "TwitchUITests.xctest"
-               BlueprintName = "TwitchUITests"
                ReferencedContainer = "container:Twitch.xcodeproj">
             </BuildableReference>
          </TestableReference>

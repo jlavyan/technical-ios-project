@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2011C093247B118600622992 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011C092247B118600622992 /* PlayerView.swift */; };
+		202C7ED5247B82E80062A0DC /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202C7ED4247B82E80062A0DC /* ActivityIndicatorView.swift */; };
 		20416A27247B227D00B6776A /* TwichLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20416A26247B227D00B6776A /* TwichLoader.swift */; };
 		20F2C37D247A54E70073189A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C37C247A54E70073189A /* AppDelegate.swift */; };
 		20F2C37F247A54E70073189A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2C37E247A54E70073189A /* SceneDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		1447518415096E2E78D2CF92 /* Pods_Twitch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2011C092247B118600622992 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		202C7ED4247B82E80062A0DC /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		20416A26247B227D00B6776A /* TwichLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwichLoader.swift; sourceTree = "<group>"; };
 		20F2C379247A54E70073189A /* Twitch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20F2C37C247A54E70073189A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Twitch/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -130,6 +132,14 @@
 			path = "Detail screen";
 			sourceTree = "<group>";
 		};
+		202C7ED3247B82D50062A0DC /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				202C7ED4247B82E80062A0DC /* ActivityIndicatorView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		20416A25247B225900B6776A /* TwichLoader */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		20F2C3AC247A60E60073189A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				202C7ED3247B82D50062A0DC /* Shared */,
 				2011C090247B10C000622992 /* Home screen */,
 				2011C091247B10D100622992 /* Detail screen */,
 			);
@@ -558,6 +569,7 @@
 				20F2C381247A54E70073189A /* HomeView.swift in Sources */,
 				20F2C3BB247A65A30073189A /* AuthTokenRepository.swift in Sources */,
 				20F2C3BF247A94B60073189A /* Token.swift in Sources */,
+				202C7ED5247B82E80062A0DC /* ActivityIndicatorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

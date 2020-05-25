@@ -25,9 +25,13 @@ struct VideoRow: View {
                 .cornerRadius(3)
                 .frame(width: 44, height: 44, alignment: .center)
             
-            Text(video.title)
-                .font(Font.system(size: 15))
-            
+            VStack(alignment: .leading, spacing: 6){
+                Text(video.title)
+                    .font(Font.system(size: 15))
+                Text("Viiew count: \(video.viewCount)")
+                    .font(Font.system(size: 11))
+            }
+
             Spacer()
         }
         .frame(height: 60)
